@@ -1,0 +1,8 @@
+%h1 Courses list
+- if @courses.present?
+  %ul
+    - @courses.each do |course|
+      %li
+        = course.title
+- else
+  %h2 No courses yet.
