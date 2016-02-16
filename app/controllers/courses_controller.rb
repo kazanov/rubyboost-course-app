@@ -31,7 +31,7 @@ class CoursesController < ApplicationController
       redirect_to courses_path
     else
       render :edit
-    end   
+    end
   end
 
   def destroy
