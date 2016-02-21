@@ -11,6 +11,11 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery-ui
 //= require bootstrap-sprockets
 //= require jquery_ujs
+//= require fastclick
+//= require jquery.slimscroll
+//= require dashboard
+//= require demo
 //= require_tree .
