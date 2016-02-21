@@ -28,14 +28,29 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug'
+  gem 'pry'
+  gem 'spring'
+  gem 'faker'
+  gem 'quiet_assets'
+  gem 'dotenv-rails', require: 'dotenv/rails-now'
+  gem 'factory_girl_rails'
 end
 
 group :development do
   gem 'web-console', '~> 2.0'
-  gem 'spring'
+  gem 'better_errors'
+  gem 'spring-commands-rspec'
 end
 
 group :production do
   gem 'pg',             '0.17.1'
   gem 'rails_12factor', '0.0.2'
+end
+
+group :test do
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+  gem 'capybara'
+  gem 'capybara-screenshot'
+  gem 'database_cleaner'
 end
