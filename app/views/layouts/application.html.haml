@@ -1,0 +1,35 @@
+!!!
+%html
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    %title RoobyboostCourseApp
+    %meta{:content => "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no", :name => "viewport"}/
+    / Ionicons
+    %link{:href => "https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css", :rel => "stylesheet"}/
+  %body.hold-transition.skin-green.sidebar-mini
+    .wrapper
+      = render 'layouts/partials/header'
+      = render 'layouts/partials/sidebar'
+      = render 'layouts/partials/content'
+      = render 'layouts/partials/footer'
+    / jQuery 2.1.4
+    %script{:src => "plugins/jQuery/jQuery-2.1.4.min.js"}
+    / jQuery UI 1.11.4
+    %script{:src => "https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"}
+    / Resolve conflict in jQuery UI tooltip with Bootstrap tooltip
+    / Bootstrap 3.3.5
+    %script{:src => "bootstrap/js/bootstrap.min.js"}
+    / Slimscroll
+    %script{:src => "plugins/slimScroll/jquery.slimscroll.min.js"}
+    / FastClick
+    %script{:src => "plugins/fastclick/fastclick.min.js"}
+    / AdminLTE App
+    %script{:src => "dist/js/app.min.js"}
+    / AdminLTE dashboard demo (This is only for demo purposes)
+    %script{:src => "dist/js/pages/dashboard.js"}
+    / AdminLTE for demo purposes
+    %script{:src => "dist/js/demo.js"}
