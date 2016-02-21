@@ -1,5 +1,4 @@
 class CoursesController < ApplicationController
-
   COURSES_PER_PAGE = 2
 
   def index
@@ -46,5 +45,4 @@ class CoursesController < ApplicationController
   def courses_params
     params.require(:course).permit(:title, :picture)
   end
-
 end
