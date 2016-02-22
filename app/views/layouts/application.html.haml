@@ -8,11 +8,11 @@
     = csrf_meta_tags
     %title RoobyboostCourseApp
     %meta{:content => "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no", :name => "viewport"}/
-    / Ionicons
-    %link{:href => "https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css", :rel => "stylesheet"}/
   %body.hold-transition.skin-green.sidebar-mini
     .wrapper
       = render 'layouts/partials/header'
       = render 'layouts/partials/sidebar'
       = render 'layouts/partials/content'
+      / %p.notice= notice
+      / %p.alert= alert
       = render 'layouts/partials/footer'

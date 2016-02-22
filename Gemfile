@@ -14,6 +14,7 @@ gem 'carrierwave', '0.9.0'
 
 gem 'sass'
 gem 'mini_magick'
+gem 'devise'  
 
 gem 'haml-rails'
 gem 'coffee-rails'
