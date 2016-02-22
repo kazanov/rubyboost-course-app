@@ -1,5 +1,5 @@
 class Users::CoursesController < Users::BaseController
-  COURSES_PER_PAGE = 2
+  COURSES_PER_PAGE = 10
 
   def index
     @courses = current_user.courses.recent.page(params[:page]).per(params[:per_page] || COURSES_PER_PAGE)

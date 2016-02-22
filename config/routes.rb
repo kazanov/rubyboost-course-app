@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :courses, only: :index
-  
+
   root 'courses#index'
 
   namespace :users do

@@ -8,6 +8,7 @@ AllCops:
     - 'bin/*'
     - 'spec/*'
     - 'db/schema.rb'
+    - 'db/migrate/*'
   TargetRubyVersion: 2.2
   DisplayCopNames: true
 
@@ -24,4 +25,4 @@ Style/ParallelAssignment:
   Enabled: false  
 
 Metrics/LineLength:
-  Max: 130
+  Max: 160
