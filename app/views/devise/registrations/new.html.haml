@@ -5,14 +5,16 @@
       = f.error_notification
       .form-inputs
         .form-group.has-feedback
-          = f.input :email, required: true, autofocus: true, placeholder: 'Enter email'
+          = f.input :email, label: false, required: true, autofocus: true do
+            = f.input_field :email, placeholder: 'Email', class: 'form-control'
           %span.glyphicon.glyphicon-envelope.form-control-feedback
         .form-group.has-feedback
-          = f.input :password, required: true, placeholder: 'Enter password',
-                               hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length)
+          = f.input :password, label: false, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) do
+            = f.input_field :password, placeholder: 'Password', class: 'form-control'
           %span.glyphicon.glyphicon-lock.form-control-feedback
         .form-group.has-feedback
-          = f.input :password_confirmation, required: true, placeholder: 'Confirm password'
+          = f.input :password_confirmation, label: false, required: true do
+            = f.input_field :password_confirmation, placeholder: 'Password confirmation', class: 'form-control'
           %span.glyphicon.glyphicon-log-in.form-control-feedback
         .row
           .col-xs-4

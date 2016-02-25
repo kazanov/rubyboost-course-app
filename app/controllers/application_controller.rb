@@ -4,4 +4,12 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for(*)
     users_courses_path
   end
+
+  layout :choose_layout
+
+  private
+
+  def choose_layout
+    devise_controller? ? 'devise_layout' : 'application'
+  end
 end

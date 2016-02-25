@@ -5,10 +5,12 @@
       = f.error_notification
       .form-inputs
         .form-group.has-feedback
-          = f.input :email, required: false, autofocus: true
+          = f.input :email, label: false, required: true, autofocus: true do
+            = f.input_field :email, placeholder: 'Email', class: 'form-control'
           %span.glyphicon.glyphicon-envelope.form-control-feedback
         .form-group.has-feedback
-          = f.input :password, required: false
+          = f.input :password, label: false, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) do
+            = f.input_field :password, placeholder: 'Password', class: 'form-control'
           %span.glyphicon.glyphicon-lock.form-control-feedback
         .row
           .col-xs-8
@@ -29,4 +31,4 @@
       = link_to 'I forgot my password', new_user_password_path
     %br/
     %a.text-center
-      = link_to 'Register a new membership', new_user_session_path
+      = link_to 'Register a new membership', new_user_registration_path

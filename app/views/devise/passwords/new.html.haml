@@ -6,7 +6,8 @@
       = f.error_notification
       .form-inputs
         .form-group.has-feedback
-          = f.input :email, required: false, autofocus: true
+          = f.input :email, label: false, required: true, autofocus: true do
+            = f.input_field :email, placeholder: 'Email', class: 'form-control'
           %span.glyphicon.glyphicon-envelope.form-control-feedback
         .row
           .col-xs-12

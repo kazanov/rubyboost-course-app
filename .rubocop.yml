@@ -6,9 +6,10 @@ AllCops:
     - 'spec/fixtures/**/*'
     - 'tmp/**/*'
     - 'bin/*'
-    - 'spec/*'
+    - 'spec/**/*'
     - 'db/schema.rb'
     - 'db/migrate/*'
+    - 'config/application.rb'
   TargetRubyVersion: 2.2
   DisplayCopNames: true
 
