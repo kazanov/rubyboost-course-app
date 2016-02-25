@@ -1,14 +1,21 @@
 require 'rails_helper'
 
-RSpec.describe CoursesController, type: :controller do
-  describe '#index' do
-    let!(:course_1) { create :course }
-    let!(:course_2) { create :course }
+describe CoursesController, type: :controller do
+  describe 'courses#index' do
+    let!(:course1) { create :course }
+    let!(:course2) { create :course }
+    let!(:course3) { create :course }
+    let!(:course4) { create :course }
+    let!(:course5) { create :course }
 
-    before { get :index }
-
-    specify do
-      expect(assigns(:courses)).to match_array [course_2, course_1]
+    before do
+      get :index
     end
+
+    it do
+      expect(assigns(:courses)).to match_array [course1, course2, course3, course4, course5]
+    end
+
+    # it { expect(assigns(:courses)).to_not include course6 }
   end
 end
