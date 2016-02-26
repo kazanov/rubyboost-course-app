@@ -1,0 +1,16 @@
+= link_to 'New course', new_users_course_path
+.row
+  - if @courses.present?
+    - @courses.each do |course|
+      .col-md-4
+        .panel.panel-default
+          .panel-heading
+            %strong= course.title
+          .panel-body
+            = image_tag course.picture.thumb, class: 'img-responsive center-block'
+          .panel-footer
+            = link_to 'Edit', edit_users_course_path(course)
+            = link_to 'Delete', users_course_path(course), method: :delete, data: { confirm: "Are you sure?" }
+    = paginate @courses, :window => 2
+  - else
+    %h2 No courses yet.

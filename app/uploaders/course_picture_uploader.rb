@@ -1,7 +1,9 @@
 class CoursePictureUploader < BaseUploader
-  process resize_to_fit: [500, 500]
+  version :admin do
+    process resize_to_fit: [600, 400]
+  end
 
   version :thumb do
-    process resize_to_fit: [150, 150]
+    process resize_to_fit: [300, 200]
   end
 end

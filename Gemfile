@@ -14,13 +14,15 @@ gem 'carrierwave', '0.9.0'
 
 gem 'sass'
 gem 'mini_magick'
+gem 'devise'
 
-gem 'sass-rails'
 gem 'haml-rails'
 gem 'coffee-rails'
 gem 'font-awesome-sass'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'sass-rails', '>= 3.2'
 
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
@@ -49,8 +51,9 @@ end
 
 group :test do
   gem 'rspec-rails'
-  gem 'shoulda-matchers'
+  gem 'shoulda-matchers', '~> 3.0'
   gem 'capybara'
   gem 'capybara-screenshot'
+  gem 'capybara-webkit'
   gem 'database_cleaner'
 end

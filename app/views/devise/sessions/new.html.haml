@@ -1,0 +1,34 @@
+.login-box
+  .login-box-body
+    %h2.login-box-msg Sign in
+    = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      = f.error_notification
+      .form-inputs
+        .form-group.has-feedback
+          = f.input :email, label: false, required: true, autofocus: true do
+            = f.input_field :email, placeholder: 'Email', class: 'form-control'
+          %span.glyphicon.glyphicon-envelope.form-control-feedback
+        .form-group.has-feedback
+          = f.input :password, label: false, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) do
+            = f.input_field :password, placeholder: 'Password', class: 'form-control'
+          %span.glyphicon.glyphicon-lock.form-control-feedback
+        .row
+          .col-xs-8
+            .checkbox.icheck
+              %label
+                = f.input :remember_me, as: :boolean if devise_mapping.rememberable?
+          .col-xs-4
+            %button.btn.btn-primary.btn-block.btn-flat{:type => "submit"} Sign In
+    .social-auth-links.text-center
+      %p - OR -
+      %a.btn.btn-block.btn-social.btn-facebook.btn-flat{:href => "#"}
+        %i.fa.fa-facebook
+        Sign in using Facebook
+      %a.btn.btn-block.btn-social.btn-google.btn-flat{:href => "#"}
+        %i.fa.fa-google-plus
+        Sign in using Google+
+    %a
+      = link_to 'I forgot my password', new_user_password_path
+    %br/
+    %a.text-center
+      = link_to 'Register a new membership', new_user_registration_path
