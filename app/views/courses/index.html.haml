@@ -11,6 +11,6 @@
           .panel-footer
             = link_to 'Edit', edit_users_course_path(course)
             = link_to 'Delete', users_course_path(course), method: :delete, data: { confirm: "Are you sure?" }
-    = paginate @courses, :window => 2
+    = paginate @courses, window: 2
   - else
     %h2 No courses yet.

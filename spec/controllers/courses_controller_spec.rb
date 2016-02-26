@@ -15,7 +15,5 @@ describe CoursesController, type: :controller do
     it do
       expect(assigns(:courses)).to match_array [course1, course2, course3, course4, course5]
     end
-
-    # it { expect(assigns(:courses)).to_not include course6 }
   end
 end
