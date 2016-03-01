@@ -1,5 +1,7 @@
 = simple_form_for [:users, course] do |f|
   = f.input :title, label: false, required: true, autofocus: true do
     = f.input_field :title, placeholder: 'Title', class: 'form-control'
+  = f.input :description do
+    = f.input_field :description, placeholder: 'Description', class: 'form-control'
   = f.input :picture,  as: :file
   = f.submit 'Save'
