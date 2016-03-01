@@ -1,0 +1,14 @@
+.row
+  .col-md-4.col-md-offset-4
+    .panel.panel-default
+      .panel-heading
+        %h1 Update profile
+      .panel-body
+        = simple_form_for current_user, url: users_profile_path do |f|
+          = f.input :email
+
+          = f.simple_fields_for :profile do |pf|
+            = pf.input  :first_name
+            = pf.input  :last_name
+
+          = f.submit 'Save'

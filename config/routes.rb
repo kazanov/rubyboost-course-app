@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   root 'courses#index'
 
   namespace :users do
+    resource  :profile, only: [:edit, :update], controller: :profile
     resources :courses
   end
   # The priority is based upon order of creation: first created -> highest priority.
