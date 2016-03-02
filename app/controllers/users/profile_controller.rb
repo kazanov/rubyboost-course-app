@@ -1,5 +1,4 @@
 class Users::ProfileController < Users::BaseController
-
   def edit
   end
 

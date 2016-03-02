@@ -1,5 +1,4 @@
 class OmniauthCallbacksController < ApplicationController
-
   def twitter
     process_callback
   end
@@ -16,10 +15,10 @@ class OmniauthCallbacksController < ApplicationController
     unless user_signed_in?
       sign_in_with_oauth_data(oauth_data) 
     end
-    
+
     current_user.register_social_profile(oauth_data.provider, oauth_data.uid)
 
-   redirect_to '/'
+    redirect_to '/'
   end
 
   def sign_in_with_oauth_data(data)

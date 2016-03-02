@@ -46,6 +46,7 @@ group :development do
   gem 'web-console', '~> 2.0'
   gem 'better_errors'
   gem 'spring-commands-rspec'
+  gem 'bullet'
 end
 
 group :production do
