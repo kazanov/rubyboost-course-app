@@ -21,12 +21,12 @@
             %button.btn.btn-primary.btn-block.btn-flat{:type => "submit"} Sign In
     .social-auth-links.text-center
       %p - OR -
-      %a.btn.btn-block.btn-social.btn-facebook.btn-flat{:href => "#"}
+      = link_to user_omniauth_authorize_path(provider: :facebook) do
         %i.fa.fa-facebook
         Sign in using Facebook
-      %a.btn.btn-block.btn-social.btn-google.btn-flat{:href => "#"}
-        %i.fa.fa-google-plus
-        Sign in using Google+
+      = link_to user_omniauth_authorize_path(provider: :twitter) do
+        %i.fa.fa-twitter
+        Sign in using Twitter
     %a
       = link_to 'I forgot my password', new_user_password_path
     %br/

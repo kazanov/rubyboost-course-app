@@ -14,6 +14,10 @@ gem 'carrierwave', '0.9.0'
 
 gem 'sass'
 gem 'mini_magick'
+
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
 gem 'devise'
 
 gem 'haml-rails'

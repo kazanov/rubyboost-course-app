@@ -6,10 +6,13 @@
         .panel.panel-default
           .panel-heading
             %strong= course.title
+            <br>
+            = course.user.first_name 
+            = course.user.last_name
           .panel-body
             = image_tag course.picture.thumb, class: 'img-responsive center-block'
           .panel-footer
-            = course.user.email
+            = course.description
     = paginate @courses, window: 2
   - else
     %h2 No courses yet.

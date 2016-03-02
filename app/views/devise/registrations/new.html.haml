@@ -22,9 +22,10 @@
           / /.col
     .social-auth-links.text-center
       %p - OR -
-      %a.btn.btn-block.btn-social.btn-facebook.btn-flat{:href => "#"}
-        %i.fa.fa-facebook
-        Sign up using Facebook
+      %a.btn.btn-block.btn-social.btn-facebook.btn-flat
+        = link_to user_omniauth_authorize_path(provider: :facebook) do
+          %i.fa.fa-facebook
+          Sign up using Facebook
       %a.btn.btn-block.btn-social.btn-google.btn-flat{:href => "#"}
         %i.fa.fa-google-plus
         Sign up using Google+
