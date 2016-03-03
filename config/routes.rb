@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: { omniauth_callbacks: 'omniauth_callbacks' }
 
-  resources :courses, only: :index
+  resources :courses, only: :index do
+    resources :participants, only: :index
+    resource  :subscriptions, only: [:create, :destroy], controller: :course_subscriptions
+  end
 
   root 'courses#index'
 
   namespace :users do
+    resource  :profile, only: [:edit, :update], controller: :profile
     resources :courses
   end
   # The priority is based upon order of creation: first created -> highest priority.

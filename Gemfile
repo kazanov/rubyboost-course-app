@@ -14,6 +14,10 @@ gem 'carrierwave', '0.9.0'
 
 gem 'sass'
 gem 'mini_magick'
+
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
 gem 'devise'
 
 gem 'haml-rails'
@@ -42,6 +46,7 @@ group :development do
   gem 'web-console', '~> 2.0'
   gem 'better_errors'
   gem 'spring-commands-rspec'
+  gem 'bullet'
 end
 
 group :production do

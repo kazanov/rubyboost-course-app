@@ -1,0 +1,20 @@
+.row
+  .col-md-9
+    .box
+      .box-header
+        %h3.box-title #{course.title} course participants
+
+
+      .box-body.no-padding
+        %table.table.table-striped
+          %tbody#participants-list
+            %tr
+              %th{:style => "width: 35%"} User
+              %th{:style => "width: 35%"} Email
+              %th Action
+            - @participants.each do |participant|
+              = render 'participant', course: course, participant: participant
+
+- if user_signed_in?
+  #subscription-button{ style: ('display: none;' if current_user.participate_in?(course)) }
+    = link_to 'Subscribe', course_subscriptions_path(course), method: :post, remote: true

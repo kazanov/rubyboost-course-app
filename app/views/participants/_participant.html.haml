@@ -1,0 +1,6 @@
+%tr{id: "course-participant-#{participant.id}"}
+  %td= "#{participant.first_name} #{participant.last_name}"
+  %td= participant.email
+  %td
+    - if user_signed_in? && participant.id == current_user.id
+      = link_to 'Unsubscribe', course_subscriptions_path(course), method: :delete, remote: true
